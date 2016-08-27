@@ -6,6 +6,7 @@
 
 <p><%= comment.text %></p>
 <p>il y a<%= time_ago_in_words comment.created_at %></p>
+<p><% link_to "Supprimer le Commentaire", [@post, comment], :method => :delete, :confirm => "Etes vous sure?" %></p>
 <% end %>
 
 <%= form_for [@post, @post.comments.build] do |f| %>
